@@ -1,10 +1,10 @@
-data "google_secret_manager_secret" "credentials" {
+data "google_secret_manager_secret" "google_credentials" {
   secret_id = "google_credentials"
   project   = var.project
 }
 
 provider "google" {
-  credentials = base64decode(data.google_secret_manager_secret.credentials.secret_id)
+  credentials = base64decode(data.google_secret_manager_secret.google_credentials.secret_id)
   project     = var.project
   region      = var.region
   zone        = var.zone

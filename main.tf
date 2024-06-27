@@ -7,7 +7,7 @@ provider "google" {
 
 terraform {
   backend "gcs" {
-    bucket      = "mybucket-georgik-kolev1998-tf-state-123"
+    bucket      = "terraform-state-file-georgik16-new"
     prefix      = "terraform-state"
     credentials = "tf-key-state.json"
   }

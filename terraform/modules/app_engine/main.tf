@@ -7,6 +7,7 @@ resource "google_app_engine_standard_app_version" "default" {
   project    = var.project
   service    = var.service
   version_id = var.version_id
+  app_engine_apis = true
   runtime    = "custom"
   
   entrypoint {

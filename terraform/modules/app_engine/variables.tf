@@ -1,11 +1,9 @@
 variable "project" {
-  description = "The GCP project ID"
-  type        = string
+  default = "gcp-new-427413"
 }
 
 variable "region" {
-  description = "The GCP region"
-  type        = string
+  default = "europe-west12"
 }
 
 variable "service" {

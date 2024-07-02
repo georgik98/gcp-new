@@ -21,7 +21,7 @@ module "network" {
 
 module "database" {
   source           = "./terraform/modules/database"
-  instance_name    = "sql-instance"
+  instance_name    = "sql-instance-2"
   database_version = "POSTGRES_13"
   region           = var.region
   tier             = "db-f1-micro"

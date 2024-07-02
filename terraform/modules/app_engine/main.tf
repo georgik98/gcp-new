@@ -1,14 +1,13 @@
 resource "google_app_engine_application" "app" {
-  project     = var.project
-  location_id = var.region
+  project     = "gcp-new-427413"
+  location_id = "europe-west"
 }
 
 resource "google_app_engine_standard_app_version" "default" {
   project    = var.project
   service    = var.service
   version_id = var.version_id
-  app_engine_apis = true
-  runtime    = "custom"
+  runtime    = "python27"
   
   entrypoint {
     shell = "gunicorn -b :$PORT main:app"

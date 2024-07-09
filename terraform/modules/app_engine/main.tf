@@ -7,7 +7,7 @@ resource "google_app_engine_standard_app_version" "default" {
   project    = var.project
   service    = var.service
   version_id = var.version_id
-  runtime    = "python27"
+  runtime    = "python39"
   
   entrypoint {
     shell = "gunicorn -b :$PORT main:app"

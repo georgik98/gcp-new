@@ -34,8 +34,8 @@ module "app_engine" {
   source      = "./terraform/modules/app_engine"
   project     = var.project
   region      = var.region
-  service     = "default"
-  version_id  = "v1"
+  service     = "internatlapp"
+  version_id  = "v2"
   source_url  = "https://storage.googleapis.com/${var.bucket_name}/${var.app_code_zip}"
   db_host     = module.database.db_instance_ip
   db_port     = "5432"
